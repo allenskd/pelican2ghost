@@ -13,6 +13,7 @@ Open your **pelicanconf.py** and add
     PLUGIN_PATHS = ['/my/base/path']
     PLUGINS = ['pelican2ghost']
 
+You can run `./develop_server.sh start` (or restart) multiple times. The data dump will be generated in your pelican folder `/path/to/your/website/folder/ghost_export`. A file called pelican2ghost.json will be there.
 
 ##### Additional notes
 
