@@ -140,4 +140,4 @@ def exporter(generator, writer):
 
 
 def register():
-    signals.article_writer_finalized.connect(importer)
+    signals.article_writer_finalized.connect(exporter)
