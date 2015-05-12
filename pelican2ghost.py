@@ -62,10 +62,12 @@ def exporter(generator, writer):
             'published_at': created_date,
             'published_by': 1,
 
+
                 }
-        if modified_date:
-            post['updated_at'] = modified_date
-            post['updated_by'] = 1
+
+        # updated_at is used by emberjs when it sorts the posts, else it becomes a mess if it receives NULL value
+        post['updated_at'] = modified_date if modified_date else created_date
+        post['updated_by'] = 1
 
         source_path = article.source_path
 
